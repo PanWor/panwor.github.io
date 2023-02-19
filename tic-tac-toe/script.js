@@ -14,17 +14,37 @@ const winningCombinations = [
   [2, 4, 6]
 ];
 
-function handleCellClick(e) {
-  const cell = e.target;
-  const currentClass = xIsNext ? 'x' : 'o';
-
-  if (!gameIsLive || cell.classList.contains('x') || cell.classList.contains('o')) {
-    return;
+function computerTurn() {
+    const cellElements = document.querySelectorAll('[data-cell]');
+    const availableCells = [];
+    cellElements.forEach(cell => {
+      if (!cell.classList.contains('x') && !cell.classList.contains('o')) {
+        availableCells.push(cell);
+      }
+    });
+    const randomCell = availableCells[Math.floor(Math.random() * availableCells.length)];
+    randomCell.classList.add('o');
+    checkGameStatus();
   }
+  
 
-  cell.classList.add(currentClass);
-  checkGameStatus();
-}
+  function handleCellClick(e) {
+    const cell = e.target;
+    const currentClass = xIsNext ? 'x' : 'o';
+  
+    if (!gameIsLive || cell.classList.contains('x') || cell.classList.contains('o')) {
+      return;
+    }
+  
+    cell.classList.add(currentClass);
+    checkGameStatus();
+  
+    if (gameIsLive) {
+      statusElement.innerHTML = "It's the computer's turn";
+      setTimeout(computerTurn, 1000);
+    }
+  }
+  
 
 function checkGameStatus() {
   const cellElements = document.querySelectorAll('[data-cell]');
