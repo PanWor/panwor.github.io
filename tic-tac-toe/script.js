@@ -112,7 +112,7 @@ function computerTurn() {
   
     if (gameIsLive && !xIsNext) {
       statusElement.innerHTML = "It's the computer's turn";
-      setTimeout(computerTurn, 1000);
+      setTimeout(computerTurn, 0);
     }
   }
   
