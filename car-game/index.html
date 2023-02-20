@@ -1,0 +1,210 @@
+<html>
+<head>
+	<title>Car Game</title>
+	<style>
+		body {
+            background-image: url('grass.jpg');
+            background-size: cover;
+			margin: 0;
+			padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+		}
+
+		#road {
+            background-color: white;
+			position: relative;
+			width: 70%; /* Reduce the width of the road */
+			height: 100%;
+			margin: 0 auto;
+			border-top: 5px solid #000; /* Remove the bottom road border */
+			border-left: 2px solid #000;
+			border-right: 2px solid #000;
+		}
+
+		.car {
+			position: absolute;
+			width: 80px; /* Make the car a little bigger */
+			height: 160px;
+			background-image: url('car.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.obstacle {
+			position: absolute;
+			width: 60px; /* Make the obstacles a little bigger */
+			height: 60px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			animation: moveObstacle 2s linear infinite;
+		}
+
+		@keyframes moveObstacle {
+			from {
+				top: -60px;
+			}
+			to {
+				top: 650px;
+			}
+		}
+
+		#score {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			font-size: 24px;
+			font-weight: bold;
+		}
+
+        button {
+            border-radius: 5px;
+            padding: 10px 20px;
+            background-color: #d1670a;
+            color: black;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+	</style>
+</head>
+<body>
+	<div id="road">
+		<div class="car"></div>
+	</div>
+	<div id="score">0</div>
+
+	<script>
+		var road = document.getElementById("road");
+		var car = document.querySelector(".car");
+		var score = document.getElementById("score");
+		var scoreValue = 0;
+		var obstacleInterval = 1000;
+		var obstacleSpeed = 7;
+		var obstacles = [];
+
+		function addObstacle() {
+			var lane = Math.floor(Math.random() * 4);
+			var obstacle = document.createElement("div");
+			obstacle.classList.add("obstacle");
+
+			// add different obstacle images
+			var obstacleImage = Math.floor(Math.random() * 4);
+			if (obstacleImage === 0) {
+				obstacle.style.backgroundImage = "url('obstacle.png')";
+			} else if (obstacleImage === 1) {
+				obstacle.style.backgroundImage = "url('obstacle1.png')";
+			} else if (obstacleImage === 2) {
+				obstacle.style.backgroundImage = "url('obstacle2.png')";
+			} else {
+				obstacle.style.backgroundImage = "url('obstacle3.png')";
+			}
+
+			// make sure obstacle spawns inside road
+			var obstaclePos = -60;
+			if (lane === 0) {
+				obstacle.style.left = "15%"; /* Adjust the left position for smaller road width */
+			} else if (lane === 1) {
+				obstacle.style.left = "35%";
+			} else if (lane === 2) {
+				obstacle.style.left = "55%";
+			} else {
+				obstacle.style.left = "75%";
+			}
+
+			road.appendChild(obstacle);
+			obstacles.push(obstacle);
+            var intervalId = setInterval(function() {
+    moveObstacles();
+  }, 10); // call moveObstacles every 10 milliseconds
+		}
+
+		function checkCollision(car, obstacle) {
+			var carRect = car.getBoundingClientRect();
+			var obstacleRect = obstacle.getBoundingClientRect();
+
+			return !(
+				carRect.bottom < obstacleRect.top ||
+				carRect.top > obstacleRect.bottom ||
+				carRect.right < obstacleRect.left ||
+				carRect.left > obstacleRect.right
+			);
+		}
+
+        function moveObstacles() {
+  for (var i = 0; i < obstacles.length; i++) {
+    obstacles[i].style.top = obstacles[i].offsetTop + obstacleSpeed + "px";
+
+    if (obstacles[i].offsetTop > road.offsetHeight) {
+      obstacles[i].remove();
+      obstacles.splice(i, 1);
+      i--;
+    } else if (checkCollision(car, obstacles[i])) {
+      gameOver();
+      clearInterval(intervalId); // Stop the interval
+      return;
+    }
+  }
+
+  scoreValue++;
+  score.textContent = scoreValue;
+  if (scoreValue % 10 === 0) {
+    obstacleInterval -= 100;
+    obstacleSpeed++;
+  }
+}
+
+function reload() {
+    location.reload();
+}
+
+function displayGameOver() {
+  var gameOverContainer = document.createElement("div");
+  gameOverContainer.style.position = "absolute";
+  gameOverContainer.style.top = "50%";
+  gameOverContainer.style.left = "50%";
+  gameOverContainer.style.transform = "translate(-50%, -50%)";
+  gameOverContainer.style.backgroundColor = "gray";
+  gameOverContainer.style.padding = "20px";
+  gameOverContainer.style.borderRadius = "10px";
+  gameOverContainer.style.textAlign = "center";
+  gameOverContainer.style.border = "border: 5px solid black;";
+  gameOverContainer.innerHTML = "<h2>Game over!</h2><p>Your score is: " + scoreValue + "</p><button class='play-again'>Play again (nie dziala)</button>";
+
+  document.body.appendChild(gameOverContainer);
+
+  document.getElementsByClass("play-again").addEventListener("click", reload());
+}
+
+function gameOver() {
+  clearInterval(intervalId); // Stop the interval
+  displayGameOver();
+}
+
+
+		document.addEventListener("keydown", function(event) {
+			if (event.key === "ArrowLeft") {
+				if (car.offsetLeft > 0) {
+					car.style.left = car.offsetLeft - 10 + "px";
+				}
+			} else if (event.key === "ArrowRight") {
+				if (car.offsetLeft < road.offsetWidth - 50) {
+					car.style.left = car.offsetLeft + 10 + "px";
+				}
+			}
+		});
+
+        var intervalId = setInterval(function() {
+    addObstacle();
+    moveObstacles();
+}, obstacleInterval);
+
+	</script>
+</body>
+</html>
