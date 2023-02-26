@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator silnego hasła</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Password Generator</h1>
+        <div class="config">
+            <label for="length">Password length:</label>
+            <input type="number" id="length" name="length" min="6" max="50" value="12">
+            <br>
+            <br>
+            <label for="uppercase">Include uppercase letters:</label>
+            <input type="checkbox" id="uppercase" name="uppercase" checked>
+            <br>
+            <br>
+            <label for="lowercase">Include lowercase letters:</label>
+            <input type="checkbox" id="lowercase" name="lowercase" checked>
+            <br>
+            <br>
+            <label for="numbers">Include numbers:</label>
+            <input type="checkbox" id="numbers" name="numbers" checked>
+            <br>
+            <br>
+            <label for="symbols">Include symbols:</label>
+            <input type="checkbox" id="symbols" name="symbols" checked>
+            <br>
+            <br>
+            <button id="generate-btn" onclick="generatePassword()">Generate Password</button>
+        </div>
+        <div class="result">
+            <textarea id="password" readonly></textarea>
+            <button id="copy-btn" onclick="copyPassword()">Copy to Clipboard</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
