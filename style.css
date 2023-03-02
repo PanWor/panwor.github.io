@@ -44,3 +44,14 @@
     content: "Reload the page";
     color: #FFF;
   }
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+#a:hover, #b:hover, #d:hover, #e:hover, #g:hover, #h:hover {
+transform: scale(1.02);
+transition: ease-in-out 0.2s;
+}
+
