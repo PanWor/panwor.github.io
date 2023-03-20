@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hurtownia wody źródlanej</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+
+<body>
+    <section id="main-container">
+        <header id="banner">
+            <h1>Źródlana woda uśmiechu doda!!!</h1>
+        </header>
+        <section id="left-panel">
+            <h2>Oferta handlowa:</h2>
+            <table>
+                <tr>
+                    <td>Woda Żywiec</td>
+                    <td>1.50 zł/1.5l</td>
+                </tr>
+                <tr>
+                    <td>Woda Muszynianka</td>
+                    <td>1.70 zł/1.5l</td>
+                </tr>
+                <tr>
+                    <td>Woda Cisowianka</td>
+                    <td>1.55 zł/1.5l</td>
+                </tr>
+            </table>
+            <form name='formularz'>
+                <BR>
+                <h1>Formularz zakupów</h1>
+                <label for='typ'>Wybierz rodzaj wody: </label>
+                <select id='typ' name='typ'>
+                    <option value='A'>Żywiec</option>
+                    <option value='B'>Muszynianka </option>
+                    <option value='C'>Cisowianka</option>
+                </select>
+                <BR>
+
+                <label for='ilosc'>Ilość butelek: </label>
+                <input type='number' id='ilosc' name='ilosc' min="0">
+                <BR>
+                <input type='button' id="button" value='Oblicz' onclick="oblicz()">
+            </form>
+            <BR>
+
+            Wynik:
+            <p id='wynik'></p>
+        </section>
+        <section id="right-panel">
+            <img src="mountain-landscape.webp" alt="Mountain landscape">
+        </section>
+        <footer id="footer">
+            <p>“Jakie to lekkie w kropli deszczu”</p>
+            <h4>Wisława Szymborska</h4>
+        </footer>
+    </section>
+    <script>
+        function oblicz() {
+            var wynik = 0;
+            var typ = document.forms['formularz']['typ'].value;
+            var ilosc = document.forms['formularz']['ilosc'].value;
+            if (typ == 'A') {
+                wynik += 1.50 * ilosc;
+            }
+            else if (typ == 'B') {
+                wynik += 1.70 * ilosc;
+            }
+            else if (typ == 'C') {
+                wynik += 1.55 * ilosc;
+            }
+
+            document.getElementById('wynik').innerHTML = wynik;
+        }
+    </script>
+</body>
+
+</html>
