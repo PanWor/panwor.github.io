@@ -319,7 +319,7 @@ ul li:before {
 }
 @media (min-width: 48em) {
   .c-services__item a:hover {
-    transform: translateY(-5px);
+    transform: scale(1.1) translate(-2px, -2px);
   }
 }
 .c-services__item a:hover h3 {
