@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <!-- Łącze style -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Dodaje custom'ową czcionkę -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+<div id="wrap">
+    <div id="startMenu">
+      <h1>Pong!</h1>
+      <button id="startBtn">GRAJ</button>
+    </div>
+    <div id="pauseMenu">
+      <h1>Gra zatrzymana!</h1>
+      <button id="continueBtn">Kontynuuj</button>
+      <button id="restartBtn">Restart</button>
+    </div>
+    <div id="gameOverMenu">
+      <h1 id="gameMessage"></h1>
+      <button id="againBtn">Spróbuj ponownie</button>
+    </div>
+    <div id="gameplay">
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+  </div>
+  <!-- Łącze script, który zrobi, żeby gra działała -->
+  <script src="script.js"></script>
+</body>
+</html>
