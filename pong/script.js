@@ -30,47 +30,74 @@ var canvas = document.getElementById('gameCanvas'),
   gameInProgress = false,
   scoreToWin = 10,
   difficultyLevel = 1,
-  gameInterval = window.setInterval(function () {});
+  gameInterval = window.setInterval(function () { }),
+  settingsMenu = document.getElementById('settingsMenu'),
+  tutorialMenu = document.getElementById('tutorialMenu'),
+  settingsBtn = document.getElementById('settingsBtn'),
+  tutorialBtn = document.getElementById('tutorialBtn'),
+  saveSettingsBtn = document.getElementById('saveSettingsBtn'),
+  closeTutorialBtn = document.getElementById('closeTutorialBtn'),
+  difficultySelect = document.getElementById('difficulty');
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ballPositionY = canvas.height / 2 - ballSize / 2;
 paddleOneY = canvas.height / 2 - paddleHeight / 2;
 paddleTwoY = canvas.height / 2 - paddleHeight / 2;
-ballVelocityY = getRandomNumber(-5, 5) * (.25 * difficultyLevel), window.addEventListener('resize', windowResize);
+ballVelocityY = getRandomNumber(-5, 5) * (.25 * difficultyLevel);
+
+window.addEventListener('resize', windowResize);
+
 startBtn.addEventListener('click', startGame);
 continueBtn.addEventListener('click', resumeGame);
 restartBtn.addEventListener('click', resetGame);
 againBtn.addEventListener('click', resetGame);
+settingsBtn.addEventListener('click', openSettings);
+tutorialBtn.addEventListener('click', openTutorial);
+saveSettingsBtn.addEventListener('click', saveSettings);
+closeTutorialBtn.addEventListener('click', closeTutorial);
+
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
+
 startMenu.className = 'active';
 pauseMenu.className = '';
 gameplay.className = '';
 gameOverMenu.className = '';
+settingsMenu.className = '';
+tutorialMenu.className = '';
+
 window.onblur = function () {
   if (gameInProgress) pauseGame();
 };
+
 function startGame() {
   gameInProgress = true;
   gameplay.className = '';
   startMenu.className = '';
   gameOverMenu.className = '';
   pauseMenu.className = '';
+  settingsMenu.className = '';
+  tutorialMenu.className = '';
   gamePaused = false;
   gameInterval = window.setInterval(function () {
     moveEverything();
     drawEverything();
   }, 1000 / fps);
 }
+
 function resetGame() {
   playerOneScore = 0;
   playerTwoScore = 0;
-  difficultyLevel = 1, ballPositionX = canvas.width / 2 - ballSize / 2;
+  difficultyLevel = 1;
+  ballPositionX = canvas.width / 2 - ballSize / 2;
   ballPositionY = canvas.height / 2 - ballSize / 2;
   paddleOneY = canvas.height / 2 - paddleHeight / 2;
   paddleTwoY = canvas.height / 2 - paddleHeight / 2;
-  ballVelocityY = getRandomNumber(-5, 5) * (.25 * difficultyLevel), startGame();
+  ballVelocityY = getRandomNumber(-5, 5) * (.25 * difficultyLevel);
+  startGame();
 }
+
 function togglePause() {
   if (gamePaused) {
     resumeGame();
@@ -78,6 +105,7 @@ function togglePause() {
     pauseGame();
   }
 }
+
 function pauseGame() {
   if (!gamePaused) {
     gamePaused = true;
@@ -86,6 +114,7 @@ function pauseGame() {
     clearInterval(gameInterval);
   }
 }
+
 function resumeGame() {
   if (gamePaused) {
     gamePaused = false;
@@ -94,50 +123,75 @@ function resumeGame() {
     startGame();
   }
 }
+
 function windowResize() {
   resetBall();
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   drawEverything();
 }
+
 function keyDown(e) {
   e.preventDefault();
   switch (e.keyCode) {
     case 13:
       if (gameInProgress) togglePause();
       break;
-    case 38:
+    case 38: // ↑
       if (!gamePaused) paddleOneDirectionY = 'up';
       break;
-    case 40:
+    case 40: // ↓
       if (!gamePaused) paddleOneDirectionY = 'down';
+      break;
+    case 87: // W
+      if (!gamePaused) paddleTwoDirectionY = 'up';
+      break;
+    case 83: // S
+      if (!gamePaused) paddleTwoDirectionY = 'down';
       break;
   }
 }
+
 function keyUp(e) {
-  paddleOneDirectionY = null;
+  switch (e.keyCode) {
+    case 38:
+      paddleOneDirectionY = null;
+      break;
+    case 40:
+      paddleOneDirectionY = null;
+      break;
+    case 87: // W
+      paddleTwoDirectionY = null;
+      break;
+    case 83: // S
+      paddleTwoDirectionY = null;
+      break;
+  }
 }
+
 function resetBall() {
-    if (ballVelocityX > 0) { // Sprawdź kierunek ruchu piłki (tylko gdy piłka porusza się w prawo)
-        if (
-          ballPositionY >= paddleTwoY && // Piłka jest na wysokości paletki
-          ballPositionY <= paddleTwoY + paddleHeight && // Piłka jest w zakresie wysokości paletki
-          ballPositionX > canvas.width - paddleWidth // Piłka dotyka paletki (nie trafi w paletkę)
-        ) {
-          ballVelocityX = -ballVelocityX; // Odwróć kierunek ruchu piłki
-          hitSound.play(); // Odtwórz dźwięk
-        }
-      }
+  if (ballVelocityX > 0) { // Sprawdź kierunek ruchu piłki (tylko gdy piłka porusza się w prawo)
+    if (
+      ballPositionY >= paddleTwoY && // Piłka jest na wysokości paletki
+      ballPositionY <= paddleTwoY + paddleHeight && // Piłka jest w zakresie wysokości paletki
+      ballPositionX > canvas.width - paddleWidth // Piłka dotyka paletki (nie trafi w paletkę)
+    ) {
+      ballVelocityX = -ballVelocityX; // Odwróć kierunek ruchu piłki
+    }
+  }
   ballVelocityY = getRandomNumber(-5, 5) * (.25 * difficultyLevel);
   ballPositionX = canvas.width / 2;
   ballPositionY = canvas.height / 2;
 }
+
 function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 function randomizeGame() {
   paddleTwoVelocityY = getRandomNumber(10, 20) * (.25 * difficultyLevel);
 }
+
 function gameOver(playerWon) {
   gameInProgress = false;
   clearInterval(gameInterval);
@@ -153,10 +207,32 @@ function gameOver(playerWon) {
   gameplay.className = '';
   gameOverMenu.className = 'active';
 }
+
+function openSettings() {
+  startMenu.className = '';
+  settingsMenu.className = 'active';
+}
+
+function openTutorial() {
+  startMenu.className = '';
+  tutorialMenu.className = 'active';
+}
+
+function saveSettings() {
+  difficultyLevel = parseInt(difficultySelect.value);
+  settingsMenu.className = '';
+  startMenu.className = 'active';
+}
+
+function closeTutorial() {
+  tutorialMenu.className = '';
+  startMenu.className = 'active';
+}
 function moveEverything() {
   ballPositionX = ballPositionX + ballVelocityX;
   if (ballPositionX > canvas.width - paddleWidth * 2 - ballSize / 2) {
     if (ballPositionY >= paddleTwoY && ballPositionY <= paddleTwoY + paddleHeight && ballPositionX < canvas.width - paddleWidth) {
+      hitSound.play();
       ballVelocityX = -ballVelocityX;
       if (ballPositionY >= paddleTwoY && ballPositionY < paddleTwoY + paddleHeight * .2) {
         ballVelocityY = -15 * (.25 * difficultyLevel);
@@ -164,7 +240,6 @@ function moveEverything() {
         ballVelocityY = -10 * (.25 * difficultyLevel);
       } else if (ballPositionY >= paddleTwoY + paddleHeight * .4 && ballPositionY < paddleTwoY + paddleHeight * .6) {
         ballVelocityY = getRandomNumber(-5, 5);
-        ;
       } else if (ballPositionY >= paddleTwoY + paddleHeight * .6 && ballPositionY < paddleTwoY + paddleHeight * .8) {
         ballVelocityY = 10 * (.25 * difficultyLevel);
       } else if (ballPositionY >= paddleTwoY + paddleHeight * .8 && ballPositionY < paddleTwoY + paddleHeight) {
@@ -179,6 +254,7 @@ function moveEverything() {
     randomizeGame();
   } else if (ballPositionX < paddleWidth * 2 + ballSize / 2) {
     if (ballPositionY >= paddleOneY && ballPositionY <= paddleOneY + paddleHeight && ballPositionX > paddleWidth + ballSize / 2) {
+      hitSound.play();
       ballVelocityX = -ballVelocityX;
       if (ballPositionY >= paddleOneY && ballPositionY < paddleOneY + paddleHeight * .2) {
         ballVelocityY = -20 * (.25 * difficultyLevel);
