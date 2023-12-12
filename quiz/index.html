@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz o JavaScripcie</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Jakieś icony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="start_btn"><button>Rozpocznij Quiz</button></div>
+
+    <!-- Dodaj pole tekstowe na nick -->
+<div class="nickname_box">
+    <input type="text" placeholder="Wpisz swój nick" class="nickname_input">
+    <button class="nickname_btn">Zatwierdź</button>
+</div>
+
+
+    <div class="info_box">
+        <div class="info-title"><span>Zasady</span></div>
+        <div class="info-list">
+            <div class="info">1. Będziesz mieć tylko <span>15 sekund</span> na każde pytanie.</div>
+            <div class="info">2. Po wybraniu odpowiedzi nie możesz jej cofnąć.</div>
+            <div class="info">3. Po upływie czasu nie możesz wybrać żadnej opcji.</div>
+            <div class="info">4. Nie możesz wyjść z quizu podczas gry.</div>
+            <div class="info">5. Punkty będą przyznawane na podstawie poprawnych odpowiedzi.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Wyjdź</button>
+            <button class="restart">Kontynuuj</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Quiz o JavaScripcie</div>
+            <div class="timer">
+                <div class="time_left_txt">Pozostały czas:</div>
+                <div class="timer_sec">30</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
+
+        <footer>
+            <div class="total_que">
+            </div>
+            <button class="next_btn">Następne pytanie</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Ukończyłeś quiz!</div>
+        <div class="score_text">
+        </div>
+        <div class="buttons">
+            <button class="restart">Zagraj ponownie</button>
+            <button class="quit">Wyjdź</button>
+        </div>
+    </div>
+
+    <script src="js/questions.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
