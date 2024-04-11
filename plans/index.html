@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | PanWor</title>
+    <link rel="icon" href="../images/home.png" type="image/png">
+    <meta content="PanWor Landing Page" property="og:title" />
+    <meta content="Landing page with projects showcase" property="og:description" />
+    <meta content="https://panwor.github.io" property="og:url" />
+    <meta content="../images/home.png" property="og:image" />
+    <meta content="#181818" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="../stylesheet/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <section id="navigation">
+            <nav>
+                <div class="nav-item-box">
+                    <a href="/" class="nav-item">
+                        <img class="nav-image" src="../images/home.png" alt="Home">
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="/projects" class="nav-item">
+                        <img class="nav-image" src="../images/projects.png" alt="Projects">
+                        <span>Projects</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="/plans" class="nav-item">
+                        <img class="nav-image" src="../images/plans.png" alt="Future plans">
+                        <span>Future plans</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="https://github.com/panwor" class="nav-item">
+                        <img class="nav-image" src="../images/github.png" alt="GitHub">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <main>
+            <div class="post-content">
+                <p id="content"></p>
+                <script>
+                    document.getElementById('content').innerHTML =
+                    marked.parse('# Future plans\n- Adding a section on the website about future plans\n- Adding responsiveness so that the site can be used on a phone\n    - IDEA: For mobile devices change navbar to the hamburger menu for better usability\n- Addition of information in the form of icons about the accessibility of the website on different devices\n- Adding information about my small school projects in the form of a subpage');
+                </script>
+            </div>
+        </main>
+        <footer>
+            <p id="disclaimer">The design is scrapped version of <a href="https://www.taniarascia.com/">www.taniarascia.com</a></p>
+            <p><span id="more">More info...</span></p>
+            <p id="more-info" style="display: none;">I know how to code, although not how to design.<br> Tania's website is nice and minimalist, so I'll admit to stealing the design. </p>
+            <p>&copy; 2024 PanWor</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("more").addEventListener("click", function() {
+            document.getElementById("more-info").style.display = "block";
+            document.getElementById("more").style.display = "none";
+        });
+    </script>
+</body>
+</html>
