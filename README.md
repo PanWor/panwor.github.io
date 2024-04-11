@@ -1,1 +1,1 @@
-# A repository with totally random projects I played with.
+# My landing page with project showcase.
