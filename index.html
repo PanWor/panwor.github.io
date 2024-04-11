@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | PanWor</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+    <div class="container">
+        <section id="navigation">
+            <nav>
+                <div class="nav-item-box">
+                    <a href="/" class="nav-item">
+                        <img class="nav-image" src="images/home.png" alt="Home">
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="/projects" class="nav-item">
+                        <img class="nav-image" src="images/projects.png" alt="Projects">
+                        <span>Projects</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="https://github.com/panwor" class="nav-item">
+                        <img class="nav-image" src="images/github.png" alt="GitHub">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <header>
+            <h1>About me</h1>
+        </header>
+        <main>
+            <div class="post-content">
+                <p>Hi, I'm David, aka PanWor. I'm a front end developer since 2022. I also have an experience in Python.</p>
+                <p>This is where I post my projects and anything else I want to. Have a look at the <a href="/projects">projects</a> page to see most of my open-source work.</p>
+                <p>This site contains no advertising, no affiliate links, no tracking or analytics, no sponsored posts, and no paywall. I just want to show what I have learned and what I have created.</p>
+            </div>
+        </main>
+        <footer>
+            <p id="disclaimer">The design is scrapped version of <a href="https://www.taniarascia.com/">www.taniarascia.com</a></p>
+            <p><span id="more">More info...</span></p>
+            <p id="more-info" style="display: none;">I know how to code, although not how to design.<br> Tania's website is nice and minimalist, so I'll admit to stealing the design. </p>
+            <p>&copy; 2024 PanWor</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("more").addEventListener("click", function() {
+            document.getElementById("more-info").style.display = "block";
+            document.getElementById("more").style.display = "none";
+        });
+    </script>
+</body>
+</html>
