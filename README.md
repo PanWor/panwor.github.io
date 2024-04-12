@@ -7,3 +7,8 @@
 - Adding information about my small school projects in the form of a subpage
 ### Implemented:
 - ~~Adding a section on the website about future plans~~
+- ~~Adding responsiveness so that the site can be used on a phone~~
+    
+### Abandoned ideas: 
+- For mobile devices change navbar to the hamburger menu for better usability[^1]
+[^1]: I don't know how to do it
