@@ -31,6 +31,11 @@ body {
     }
 }
 
+@media screen and (max-width: 600px) {
+    body {
+        margin-top: 80px; /* Because 60px (navbar height) + 20px for text not looking glued to the navbar */
+    }
+}
 
 .container {
     max-width: 780px;
@@ -63,7 +68,7 @@ main#projects {
 
 @media screen and (max-width: 600px) {
     main#projects {
-    grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -154,12 +159,10 @@ a.button:active, button:active {
 
 #navigation {
     background: #181818;
-    border-bottom: 1px solid #2c2c2c;
     border-bottom: none;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-    height: 60px;
+    height: auto;
     left: 0;
-    position: fixed;
     position: static;
     top: 0;
     width: 100%;
@@ -169,11 +172,38 @@ a.button:active, button:active {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 600px) {
+    #navigation {
+        border-bottom: 1px solid #2c2c2c;
+        position: fixed;
+        height: 60px;
+        padding: 0 1rem;
+    }
+}
+
 #navigation nav {
     gap: .5rem;
     align-items: center;
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    #navigation nav {
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
+
+@media (hover: none) {
+    #navigation nav {
+        -ms-overflow-style: none;  /* IE 10+ */
+        scrollbar-width: none;  /* Firefox */
+        overflow: -moz-scrollbars-none;  /* Firefox */
+    }
+    #navigation nav::-webkit-scrollbar {
+        display: none;  /* Chrome Safari */
+    }
 }
 
 .nav-item-box {
@@ -201,6 +231,9 @@ a.button:active, button:active {
 .nav-item-box a {
     background: transparent;
     text-decoration: none;
+    min-height: min-content;
+    max-height: 20px;
+    white-space: nowrap; /* Text must be in one line */
 }
 
 .nav-item-box a:hover {
