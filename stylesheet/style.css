@@ -13,6 +13,7 @@
     --muted-color: #999;
     --button-background-color: #252525;
     --font-color-base: #ddd;
+    --body-margin-900: 24px;
 }
 
 body {
@@ -20,7 +21,16 @@ body {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     color: white;
     margin: 0;
+    width: 100vw;
 }
+
+@media screen and (max-width: 900px) {
+    body {
+        margin-left: var(--body-margin-900);
+        margin-right: var(--body-margin-900);
+    }
+}
+
 
 .container {
     max-width: 780px;
@@ -49,6 +59,12 @@ main#projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    main#projects {
+    grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .project-card {
