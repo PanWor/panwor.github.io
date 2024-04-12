@@ -13,7 +13,7 @@
     --muted-color: #999;
     --button-background-color: #252525;
     --font-color-base: #ddd;
-    --body-margin-900: 24px;
+    --margin-16: 16px;
 }
 
 body {
@@ -24,16 +24,16 @@ body {
     width: 100vw;
 }
 
-@media screen and (max-width: 900px) {
-    body {
-        margin-left: var(--body-margin-900);
-        margin-right: var(--body-margin-900);
+@media screen and (max-width: 600px) {
+    .container {
+        margin-top: 80px;
     }
 }
 
-@media screen and (max-width: 600px) {
-    body {
-        margin-top: 80px; /* Because 60px (navbar height) + 20px for text not looking glued to the navbar */
+@media screen and (max-width: 900px) {
+    .container {
+        margin-left: var(--margin-16) !important;
+        margin-right: var(--margin-16) !important;
     }
 }
 
@@ -192,19 +192,11 @@ a.button:active, button:active {
     #navigation nav {
         overflow-x: scroll;
         white-space: nowrap;
+        width: calc(100% - 2rem);
+        justify-content: flex-start !important;
     }
 }
 
-@media (hover: none) {
-    #navigation nav {
-        -ms-overflow-style: none;  /* IE 10+ */
-        scrollbar-width: none;  /* Firefox */
-        overflow: -moz-scrollbars-none;  /* Firefox */
-    }
-    #navigation nav::-webkit-scrollbar {
-        display: none;  /* Chrome Safari */
-    }
-}
 
 .nav-item-box {
     align-items: center;
