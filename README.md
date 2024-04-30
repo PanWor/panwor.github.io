@@ -9,6 +9,7 @@
 ### Project plans:
 - Minesweeper
 - Maze generator and labirynth game
+- PWA that sends a notification if you have a lucky number (for my school)
 
 ### Implemented:
 - ~~Adding a section on the website about future plans~~
