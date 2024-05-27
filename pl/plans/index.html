@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przyszłe plany | PanWor</title>
+    <link rel="icon" href="../images/home.png" type="image/png">
+    <meta content="Przyszłe plany | PanWor" property="og:title" />
+    <meta content="Strona z przyszłymi planami" property="og:description" />
+    <meta content="https://panwor.github.io" property="og:url" />
+    <meta content="../images/home.png" property="og:image" />
+    <meta content="#181818" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="../../stylesheet/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <section id="navigation">
+            <nav>
+                <div class="nav-item-box">
+                    <a href="/" class="nav-item">
+                        <img class="nav-image" src="../images/home.png" alt="Strona główna">
+                        <span>Strona główna</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="/projects" class="nav-item">
+                        <img class="nav-image" src="../images/projects.png" alt="Projekty">
+                        <span>Projekty</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="/plans" class="nav-item">
+                        <img class="nav-image" src="../images/plans.png" alt="Przyszłe plany">
+                        <span>Przyszłe plany</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="https://github.com/panwor" class="nav-item">
+                        <img class="nav-image" src="../images/github.png" alt="GitHub">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="../../plans" class="nav-item">
+                        <img class="nav-image" id="flag" src="images/us-flag.png" alt="Zmień język">
+                        <span>Zmień język (🇺🇸)</span>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <main>
+            <div class="post-content">
+                <p id="content"></p>
+                <script>
+                    document.getElementById('content').innerHTML =
+                    marked.parse("# Przyszłe plany\n- Dodanie informacji w formie ikonek o dostępności strony na różnych urządzeniach\n- Dodanie informacji o tym czy projekt będzie zaktualizowany (w przyszłości) czy nie i czy jest w wersji BETA\n- Dodanie informacji o moich małych szkolnych projektach w formie podstrony\n## Wdrożone\n- ~~Dodanie tej sekcji (Przyszłe plany)~~\n- ~~Dodanie responsywności, aby strona mogła być używana na telefonie~~\n## Porzucone pomysły: \n- Dla urządzeń mobilnych zmienić navbar na menu hamburgera dla lepszej użyteczności^\n\n^ - Nie wiem jak to zrobić.");
+                </script>
+            </div>
+        </main>
+        <footer>
+            <p id="disclaimer">Projekt jest przerobioną wersją strony <a href="https://www.taniarascia.com/">www.taniarascia.com</a></p>
+            <p><span id="more">Więcej informacji...</span></p>
+            <p id="more-info" style="display: none;">Wiem jak programować, ale nie jak zaprojektować dobrą i ładną stronę.<br> Strona Tanii jest ładna i minimalistyczna, więc przyznaję się do kradzieży designu. </p>
+            <p>&copy; 2024 PanWor</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("more").addEventListener("click", function() {
+            document.getElementById("more-info").style.display = "block";
+            document.getElementById("more").style.display = "none";
+        });
+    </script>
+    <script src="../javascripts/menu.js"></script>
+</body>
+</html>

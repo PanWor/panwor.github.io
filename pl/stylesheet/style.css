@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/menlo');
+
+* {
+    color-scheme: dark;
+}
+
+:root {
+    --bg-color: #181818;
+    --card-color: #1f1f1f;
+    --border-color: #2c2c2c;
+    --green: #5eddac;
+    --muted-color: #999;
+    --button-background-color: #252525;
+    --font-color-base: #ddd;
+    --margin-16: 16px;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    color: white;
+    margin: 0;
+    width: 100vw;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        margin-left: var(--margin-16) !important;
+        margin-right: var(--margin-16) !important;
+    }
+}
+
+.container {
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+header h4 {
+    font-weight: 400;
+    font-size: .9rem;
+    margin-top: -1rem;
+    color: var(--muted-color);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+main#projects {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    main#projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.project-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    line-height: 1.3;
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+a.project-title {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: .1rem 0 .5rem;
+    display: block;
+}
+
+.project-card h4 {
+    font-size: .9rem;
+    margin: 0;
+    color: var(--muted-color);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+}
+
+.project-card .lang {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+}
+
+time {
+    font-family: Menlo, "IBM Plex Mono", Menlo, monospace;
+    color: var(--green);
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.links.anchored {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.button, button {
+    align-items: center;
+    background: var(--button-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--font-color-base);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    gap: .25rem;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: .6rem 1rem;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    white-space: nowrap;
+}
+
+a.button:hover, button:hover {
+    border-color: #666;
+    color: white;
+}
+
+a.button:active, button:active {
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+}
+
+#navigation {
+    background: #181818;
+    border-bottom: none;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    height: auto;
+    left: 0;
+    position: static;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    #navigation {
+        border-bottom: 1px solid #2c2c2c;
+        position: fixed;
+        height: 60px;
+        padding: 0 1rem;
+    }
+}
+
+#navigation nav {
+    gap: .5rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    #navigation nav {
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: calc(100% - 2rem);
+        justify-content: flex-start !important;
+    }
+}
+
+
+.nav-item-box {
+    align-items: center;
+    display: flex;
+}
+
+.nav-item {
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: #bbb;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: .5rem;
+    justify-content: space-between;
+    padding: .75rem .75rem;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+}
+
+.nav-item-box a {
+    background: transparent;
+    text-decoration: none;
+    min-height: min-content;
+    max-height: 20px;
+    white-space: nowrap; /* Text must be in one line */
+}
+
+.nav-item-box a:hover {
+    background: #252525;
+    border-color: #666;
+    color: white;
+}
+
+.nav-item-box a:active {
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+}
+
+.nav-image {
+    height: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    width: 20px;
+}
+
+.post-content p {
+    -webkit-font-smoothing: auto;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    font-size: 1.1rem;
+    letter-spacing: -.01rem;
+    line-height: 1.625;
+    color: #ddd;
+}
+
+.post-content a, footer a {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    color: #98a0fa;
+}
+
+#disclaimer {
+    color: #999;
+}
+
+#more {
+    cursor: pointer;
+    -webkit-text-decoration-line: none;
+    text-decoration-line: none;
+    color: #98a0fa;
+}
+
+#more-info {
+    color: #999;
+}

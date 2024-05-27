@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | PanWor</title>
+    <link rel="icon" href="images/home.png" type="image/png">
+    <meta content="Strona startowa PanWor" property="og:title" />
+    <meta content="Strona startowa z różnymi projektami" property="og:description" />
+    <meta content="https://panwor.github.io" property="og:url" />
+    <meta content="images/home.png" property="og:image" />
+    <meta content="#181818" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="../stylesheet/style.css">
+</head>
+<body>
+    <div class="container">
+        <section id="navigation">
+            <nav>
+                <div class="nav-item-box">
+                    <a href="/" class="nav-item">
+                        <img class="nav-image" src="../images/home.png" alt="Strona główna">
+                        <span>Strona główna</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="/projects" class="nav-item">
+                        <img class="nav-image" src="../images/projects.png" alt="Projekty">
+                        <span>Projekty</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="/plans" class="nav-item">
+                        <img class="nav-image" src="../images/plans.png" alt="Przyszłe plany">
+                        <span>Przyszłe plany</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="https://github.com/panwor" class="nav-item">
+                        <img class="nav-image" src="../images/github.png" alt="GitHub">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <div class="nav-item-box">
+                    <a href="../" class="nav-item">
+                        <img class="nav-image" id="flag" src="images/us-flag.png" alt="Zmień język">
+                        <span>Zmień język (🇺🇸)</span>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <header>
+            <h1>O mnie</h1>
+        </header>
+        <main>
+            <div class="post-content">
+                <p>Cześć, jestem PanWor, a tak w zasadzie PanWor. Jestem programistą front-end od 2022 roku. Mam również (małe, ale jednak) doświadczenie w Pythonie.</p>
+                <p>To tutaj będę publikował swoje projekty i cokolwiek innego, co chcę. Zajrzyj też na stronę <a href="/projects">z moimi projektami</a>, aby zobaczyć większość moich prac open-source.</p>
+                <p>Ta strona nie zawiera reklam, linków partnerskich, śledzenia ani analiz, postów sponsorowanych ani paywalla. Chcę tylko pokazać, czego się nauczyłem i co stworzyłem.</p>
+            </div>
+        </main>
+        <footer>
+            <p id="disclaimer">Projekt jest przerobioną wersją strony <a href="https://www.taniarascia.com/">www.taniarascia.com</a></p>
+            <p><span id="more">Więcej informacji...</span></p>
+            <p id="more-info" style="display: none;">Wiem jak programować, ale nie jak zaprojektować dobrą i ładną stronę.<br> Strona Tanii jest ładna i minimalistyczna, więc przyznaję się do kradzieży designu. </p>
+            <p>&copy; 2024 PanWor</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("more").addEventListener("click", function() {
+            document.getElementById("more-info").style.display = "block";
+            document.getElementById("more").style.display = "none";
+        });
+    </script>
+</body>
+</html>
