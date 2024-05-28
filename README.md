@@ -1,3 +1,5 @@
+# Page is currently under development and broken 
+
 # My landing page with project showcase.
 ### Future plans:
 - Adding responsiveness so that the site can be used on a phone
