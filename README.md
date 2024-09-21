@@ -1,5 +1,3 @@
-# Page is currently under development and broken 
-
 # My landing page with project showcase.
 ### Future plans:
 - Adding responsiveness so that the site can be used on a phone
@@ -16,6 +14,7 @@
 ### Implemented:
 - ~~Adding a section on the website about future plans~~
 - ~~Adding responsiveness so that the site can be used on a phone~~
+- ~~Adding a function to change the language (English and Polish)~~
     
 ### Abandoned ideas: 
 - For mobile devices change navbar to the hamburger menu for better usability[^1]
