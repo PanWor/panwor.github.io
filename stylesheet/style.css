@@ -14,11 +14,12 @@
     --button-background-color: #252525;
     --font-color-base: #ddd;
     --margin-16: 16px;
+    --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
     background-color: var(--bg-color);
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-family);
     color: white;
     margin: 0;
     max-width: 100%;
@@ -56,7 +57,7 @@ header h4 {
     font-size: .9rem;
     margin-top: -1rem;
     color: var(--muted-color);
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-family);
 }
 
 main#projects {
@@ -93,7 +94,7 @@ a.project-title {
     font-size: .9rem;
     margin: 0;
     color: var(--muted-color);
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-family);
     font-weight: 400;
     display: block;
 }
@@ -134,7 +135,7 @@ a.button, button {
     color: var(--font-color-base);
     cursor: pointer;
     display: inline-flex;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-family);
     font-size: .9rem;
     font-weight: 500;
     gap: .25rem;
@@ -160,7 +161,7 @@ a.button:active, button:active {
 #navigation {
     background: #181818;
     border-bottom: none;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-family);
     height: auto;
     left: 0;
     position: static;
