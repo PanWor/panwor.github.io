@@ -165,7 +165,7 @@ a.button:hover, button:hover, .dropdown:hover {
     color: white;
 }
 
-a.button:active, button:active, .dropdown:active {
+a.button:active, button:active {
     -webkit-transform: scale(.95);
     transform: scale(.95);
 }

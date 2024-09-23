@@ -6,6 +6,7 @@
                 "title": "Pong",
                 "description": "Prosta gra 2D w tenisa stołowego",
                 "date-word": "Maj, 2023",
+                "date": "2023-05-29",
                 "lang": "pl",
                 "demo": "https://panwor.github.io/pong",
                 "source": "https://github.com/PanWor/pong"
@@ -15,6 +16,7 @@
                 "title": "Quiz o JavaScript'cie",
                 "description": "Bardzo dopracowana strona z quizem na temat JS",
                 "date-word": "Grudzień, 2023",
+                "date": "2023-12-06",
                 "lang": "pl",
                 "demo": "https://panwor.github.io/quiz",
                 "source": "https://github.com/PanWor/quiz"
@@ -24,6 +26,7 @@
                 "title": "Jack's Blackjack",
                 "description": "Prosta gra w blackjacka. (Brak funkcji \"Double\")",
                 "date-word": "Maj, 2024",
+                "date": "2024-05-27",
                 "lang": "pl",
                 "demo": "https://panwor.github.io/blackjack",
                 "source": "https://github.com/PanWor/blackjack"
@@ -33,6 +36,7 @@
                 "title": "Kółko i Krzyżyk",
                 "description": "Prosta gra \"Kółko i Krzyżyk\" z algorytmem Minimax (tj. taka, w której nie możesz wygrać)",
                 "date-word": "Luty, 2024",
+                "date": "2023-02-21",
                 "lang": "en",
                 "demo": "https://panwor.github.io/tic-tac-toe",
                 "source": "https://github.com/PanWor/tic-tac-toe"
@@ -42,6 +46,7 @@
                 "title": "Generator złotych myśli",
                 "description": "Strona do generowania losowych złotych myśli używając API",
                 "date-word": "Luty, 2023",
+                "date": "2023-02-22",
                 "lang": "en",
                 "demo": "https://panwor.github.io/golden-thought",
                 "source": "https://github.com/PanWor/golden-thought"
@@ -51,6 +56,7 @@
                 "title": "Remake \"Pixel Cars\"",
                 "description": "Remake gry stworzonej przez mojego znajomego (oryginalnie napisanej w Scratchu)",
                 "date-word": "Luty, 2023",
+                "date": "2023-02-22",
                 "lang": "en",
                 "demo": "https://panwor.github.io/car-game",
                 "source": "https://github.com/PanWor/car-game"
@@ -60,6 +66,7 @@
                 "title": "Stare projekty w Pythonie",
                 "description": "Bardzo prosty konwerter temperatury i kalkulator powierzchni figur płaskich",
                 "date-word": "Grudzień, 2021",
+                "date": "2021-12-05",
                 "lang": "pl",
                 "source": "https://github.com/PanWor/old-python"
             },
@@ -68,6 +75,7 @@
                 "title": "Szkolne projekty",
                 "description": "Projekty ze szkoły od pana Kuriaty i pana Soppy",
                 "date-word": "–, –",
+                "date": "2024-09-21",
                 "lang": "none",
                 "see-more": "school/"
             },
@@ -75,7 +83,8 @@
                 "id": "strong-password",
                 "title": "Generator silnego hasła",
                 "description": "Generator silnych haseł z opcjami ustawiania preferencji. Możesz również sprawdzić, jak silne jest Twoje hasło!",
-                "date-word": "Marzec, 2023",
+                "date-word": "Luty, 2023",
+                "date": "2023-02-28",
                 "lang": "en",
                 "demo": "https://panwor.github.io/strongpassword",
                 "source": "https://github.com/PanWor/strongpassword"
@@ -85,6 +94,7 @@
                 "title": "Aplikacja To-do",
                 "description": "Aplikacja To-do z zapisywaniem notatek nawet po odświeżeniu przeglądarki!",
                 "date-word": "Luty, 2023",
+                "date": "2023-02-26",
                 "lang": "en",
                 "demo": "https://panwor.github.io/todo",
                 "source": "https://github.com/PanWor/todo"
@@ -94,6 +104,7 @@
                 "title": "Pogoda (w Opolu)",
                 "description": "Po prostu pokazuje aktualną i do 3 dni naprzód pogodę w Opolu przy użyciu API",
                 "date-word": "Luty, 2023",
+                "date": "2023-02-23",
                 "lang": "pl",
                 "demo": "https://panwor.github.io/weather",
                 "source": "https://github.com/PanWor/weather"
@@ -105,6 +116,7 @@
                 "title": "Pong",
                 "description": "A simple 2D game about table tennis",
                 "date-word": "May, 2023",
+                "date": "2023-05-29",
                 "lang": "pl",
                 "demo": "https://panwor.github.io/pong",
                 "source": "https://github.com/PanWor/pong"
@@ -114,6 +126,7 @@
                 "title": "Quiz about JavaScript",
                 "description": "A very well-crafted site with a quiz about JS",
                 "date-word": "Dec, 2023",
+                "date": "2023-12-06",
                 "lang": "pl",
                 "demo": "https://panwor.github.io/quiz",
                 "source": "https://github.com/PanWor/quiz"
@@ -123,6 +136,7 @@
                 "title": "Jack's Blackjack",
                 "description": "Simple blackjack game. (No \"Double\" function yet)",
                 "date-word": "May, 2024",
+                "date": "2024-05-27",
                 "lang": "pl",
                 "demo": "https://panwor.github.io/blackjack",
                 "source": "https://github.com/PanWor/blackjack"
@@ -132,6 +146,7 @@
                 "title": "Tic-Tac-Toe",
                 "description": "A simple game of \"Tic-Tac-Toe\" with the Minimax algorithm (i.e., that you can't win)",
                 "date-word": "Feb, 2024",
+                "date": "2023-02-21",
                 "lang": "en",
                 "demo": "https://panwor.github.io/tic-tac-toe",
                 "source": "https://github.com/PanWor/tic-tac-toe"
@@ -141,6 +156,7 @@
                 "title": "Golden thought generator",
                 "description": "A very simple site to generate random golden thoughts using API",
                 "date-word": "Feb, 2023",
+                "date": "2023-02-22",
                 "lang": "en",
                 "demo": "https://panwor.github.io/golden-thought",
                 "source": "https://github.com/PanWor/golden-thought"
@@ -150,6 +166,7 @@
                 "title": "\"Pixel Cars\" Remake",
                 "description": "A remake of game made by my friend (originally written in Scratch)",
                 "date-word": "Feb, 2023",
+                "date": "2023-02-22",
                 "lang": "en",
                 "demo": "https://panwor.github.io/car-game",
                 "source": "https://github.com/PanWor/car-game"
@@ -159,6 +176,7 @@
                 "title": "Old python projects",
                 "description": "Very simple temperature converter and plane figure area calculator",
                 "date-word": "Dec, 2021",
+                "date": "2021-12-05",
                 "lang": "pl",
                 "source": "https://github.com/PanWor/old-python"
             },
@@ -167,6 +185,7 @@
                 "title": "School projects",
                 "description": "Projects from the school from Mr Kuriata and Mr Soppa",
                 "date-word": "–, –",
+                "date": "2024-09-21",
                 "lang": "none",
                 "see-more": "school/"
             },
@@ -174,7 +193,8 @@
                 "id": "strong-password",
                 "title": "Strong Password",
                 "description": "Strong password generator with options to set preferences. Also you can check how strong your password is!",
-                "date-word": "Mar, 2023",
+                "date-word": "Feb, 2023",
+                "date": "2023-02-28",
                 "lang": "en",
                 "demo": "https://panwor.github.io/strongpassword",
                 "source": "https://github.com/PanWor/strongpassword"
@@ -184,6 +204,7 @@
                 "title": "Todo app",
                 "description": "Todo app with saving notes even after browser refresh!",
                 "date-word": "Feb, 2023",
+                "date": "2023-02-26",
                 "lang": "en",
                 "demo": "https://panwor.github.io/todo",
                 "source": "https://github.com/PanWor/todo"
@@ -193,6 +214,7 @@
                 "title": "Weather (in Opole)",
                 "description": "It simply shows the current and up to 3 days ahead weather in Opole using the API",
                 "date-word": "Feb, 2023",
+                "date": "2023-02-23",
                 "lang": "pl",
                 "demo": "https://panwor.github.io/weather",
                 "source": "https://github.com/PanWor/weather"

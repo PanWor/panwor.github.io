@@ -1,21 +1,22 @@
 function sortProjects(data) {
+    console.log(`SortProjects function called`);
     if (window.location.href.includes('?order=')) {
           const order = window.location.href.split('?order=')[1];
           console.log(order);
       
           if (order === 'asc') {
-              return data.projects.sort((a, b) => a.title.localeCompare(b.title)); // Sort articles by title ascending
+              return data.sort((a, b) => a.title.localeCompare(b.title)); // Sort articles by title ascending
           } else if (order === 'desc') {
-              return data.projects.sort((a, b) => b.title.localeCompare(a.title)); // Sort articles by title descending
+              return data.sort((a, b) => b.title.localeCompare(a.title)); // Sort articles by title descending
           } else if (order === 'new') {
-              return data.projects.sort((a, b) => b.date.localeCompare(a.date)); // Sort articles by date descending
+              return data.sort((a, b) => b.date.localeCompare(a.date)); // Sort articles by date descending
           } else if (order === 'old') {
-              return data.projects.sort((a, b) => a.date.localeCompare(b.date)); // Sort articles by date ascending
+              return data.sort((a, b) => a.date.localeCompare(b.date)); // Sort articles by date ascending
           } else {
-              return data.projects; // Sort by pre-set list (default)
+              return data; // Sort by pre-set list (default)
           }
       } else {
-          return data.projects; // Sort by pre-set list (default)
+          return data; // Sort by pre-set list (default)
       }
 }
 
@@ -29,9 +30,9 @@ function whatLanguage() {
 
 function whereIsJSON() {
     if (window.location.href.includes('/pl/projects')) {
-        return '../articles.json';
+        return '../../projects.json';
     } else {
-        return 'articles.json';
+        return '../projects.json';
     }
 }
 
@@ -55,7 +56,7 @@ function languageButtons(lang) {
     }
 }
 
-const projectsContainer = document.querySelector('.projects');
+const projectsContainer = document.querySelector('#projects');
   
 fetch(whereIsJSON())
     .then(response => {
@@ -66,12 +67,8 @@ fetch(whereIsJSON())
 })
     .then(data => {
         let success = true; 
-        let query = null;
-        if (window.location.href.includes('?q=')) {
-          query = window.location.href.split('?q=')[1];
-        }
         buttons = languageButtons(whatLanguage());
-        data = data[whatLanguage()];
+        data = data.articles[whatLanguage()];
         console.log(`Projects: `, data);
         const sortedProjects = sortProjects(data);
                 
@@ -83,7 +80,6 @@ fetch(whereIsJSON())
           let demo = project['demo'] ? project['demo'] : null;
           let source = project['source'] ? project['source'] : null;
           let seeMore = project['see-more'] ? project['see-more'] : null;
-          console.log(relativeDate);
   
           projectsContainer.innerHTML += `
             <div class="project-card">

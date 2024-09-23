@@ -49,11 +49,23 @@
             </nav>
         </section>
         <header>
-            <h1>My projects</h1>
+            <div class="header-box">
+                <h1>My Projects</h1>
+                <details class="dropdown">
+                    <summary style="user-select: none;">Sort by</summary>
+                    <ul class="dropdown-menu" style="margin-left: calc(-24px);">
+                        <li onclick="window.location.href = '?order=asc'"><a class="dropdown-item" href="?order=asc">A to Z</a></li>
+                        <li onclick="window.location.href = '?order=desc'"><a class="dropdown-item" href="?order=desc">Z to A</a></li>
+                        <hr>
+                        <li onclick="window.location.href = '?order=new'"><a class="dropdown-item" href="?order=new">Newest first</a></li>
+                        <li onclick="window.location.href = '?order=old'"><a class="dropdown-item" href="?order=old">Oldest first</a></li>
+                    </ul>
+                </details>
+            </div>
             <h4>(Some projects are in Polish)</h4>
         </header>
         <main id="projects">
-            <div class="project-card">
+            <!-- <div class="project-card">
                 <div class="lang">🇵🇱</div>
                 <time>May, 2023</time>
                 <a class="project-title">Pong</a>
@@ -160,7 +172,7 @@
                     <a class="button small flex" href="https://panwor.github.io/weather" target="_blank" rel="noreferrer">Demo<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:0.75rem;height:0.75rem;fill:currentColor"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg></a>
                     <a class="button small flex" href="https://github.com/PanWor/weather" target="_blank" rel="noreferrer">Source <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:0.75rem;height:0.75rem;fill:currentColor"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg></a>
                 </div>
-            </div>
+            </div> -->
         </main>
         <footer>
             <p id="disclaimer">The design is scrapped version of <a href="https://www.taniarascia.com/">www.taniarascia.com</a></p>
@@ -175,5 +187,6 @@
             document.getElementById("more").style.display = "none";
         });
     </script>
+    <script src="../projects.js"></script>
 </body>
 </html>
