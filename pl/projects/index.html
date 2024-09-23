@@ -49,7 +49,19 @@
             </nav>
         </section>
         <header>
-            <h1>Moje projekty</h1>
+            <div class="header-box">
+                <h1>Projekty</h1>
+                <details class="dropdown">
+                    <summary style="user-select: none;">Sortuj</summary>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="?order=asc">Od A do Z</a></li>
+                        <li><a class="dropdown-item" href="?order=desc">Od Z do A</a></li>
+                        <hr>
+                        <li><a class="dropdown-item" href="?order=new">Od najnowszych</a></li>
+                        <li><a class="dropdown-item" href="?order=old">Od najstarszych</a></li>
+                    </ul>
+                </details>
+            </div>
             <h4>(Niektóre projekty są w języku angielskim)</h4>
         </header>
         <main id="projects">

@@ -60,6 +60,14 @@ header h4 {
     font-family: var(--font-family);
 }
 
+.header-box {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
 main#projects {
     display: flex;
     display: grid;
@@ -127,7 +135,7 @@ a {
     text-decoration: none;
 }
 
-a.button, button {
+a.button, button, .dropdown {
     align-items: center;
     background: var(--button-background-color);
     border: 1px solid var(--border-color);
@@ -148,14 +156,71 @@ a.button, button {
     white-space: nowrap;
 }
 
-a.button:hover, button:hover {
+.dropdown {
+    margin: -10px 0px 30px;
+}
+
+a.button:hover, button:hover, .dropdown:hover {
     border-color: #666;
     color: white;
 }
 
-a.button:active, button:active {
+a.button:active, button:active, .dropdown:active {
     -webkit-transform: scale(.95);
     transform: scale(.95);
+}
+
+.dropdown-menu {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--font-color-base);
+    display: block;
+    font-family: var(--font-family);
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    list-style: none;
+    margin-left: calc(-64px);
+    padding: 0;
+    position: absolute;
+    width: max-content;
+    z-index: 2;
+}
+
+.dropdown-item:hover {
+    color: var(--font-color-base);
+}
+
+.dropdown-menu li {
+    padding: 5px 10px 5px 10px; /* top, right, bottom, left */
+}
+
+.dropdown-menu li:hover {
+    background: #252525;
+    border-color: #666;
+    color: white;
+}
+
+.dropdown-menu hr {
+    margin: 5px 9px;
+}
+
+.dropdown-menu li:first-child {
+    margin-top: 5px;
+}
+
+.dropdown-menu li:last-child {
+    margin-bottom: 5px;
+}
+
+a:link, a:visited {
+    color: var(--font-color-base);
+}
+
+a:hover, a:active {
+    color: var(--muted-color);
+    background-color: var();
 }
 
 #navigation {
