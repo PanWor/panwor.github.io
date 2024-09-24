@@ -8,6 +8,8 @@
                 "date-word": "Maj, 2023",
                 "date": "2023-05-29",
                 "lang": "pl",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/pong",
                 "source": "https://github.com/PanWor/pong"
             },
@@ -18,6 +20,8 @@
                 "date-word": "Grudzień, 2023",
                 "date": "2023-12-06",
                 "lang": "pl",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/quiz",
                 "source": "https://github.com/PanWor/quiz"
             },
@@ -28,6 +32,8 @@
                 "date-word": "Maj, 2024",
                 "date": "2024-05-27",
                 "lang": "pl",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/blackjack",
                 "source": "https://github.com/PanWor/blackjack"
             },
@@ -38,6 +44,8 @@
                 "date-word": "Luty, 2024",
                 "date": "2023-02-21",
                 "lang": "en",
+                "pc": true,
+                "mobile": true,
                 "demo": "https://panwor.github.io/tic-tac-toe",
                 "source": "https://github.com/PanWor/tic-tac-toe"
             },
@@ -48,6 +56,8 @@
                 "date-word": "Luty, 2023",
                 "date": "2023-02-22",
                 "lang": "en",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/golden-thought",
                 "source": "https://github.com/PanWor/golden-thought"
             },
@@ -58,6 +68,8 @@
                 "date-word": "Luty, 2023",
                 "date": "2023-02-22",
                 "lang": "en",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/car-game",
                 "source": "https://github.com/PanWor/car-game"
             },
@@ -86,6 +98,8 @@
                 "date-word": "Luty, 2023",
                 "date": "2023-02-28",
                 "lang": "en",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/strongpassword",
                 "source": "https://github.com/PanWor/strongpassword"
             },
@@ -96,6 +110,8 @@
                 "date-word": "Luty, 2023",
                 "date": "2023-02-26",
                 "lang": "en",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/todo",
                 "source": "https://github.com/PanWor/todo"
             },
@@ -106,6 +122,8 @@
                 "date-word": "Luty, 2023",
                 "date": "2023-02-23",
                 "lang": "pl",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/weather",
                 "source": "https://github.com/PanWor/weather"
             }
@@ -118,6 +136,8 @@
                 "date-word": "May, 2023",
                 "date": "2023-05-29",
                 "lang": "pl",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/pong",
                 "source": "https://github.com/PanWor/pong"
             },
@@ -128,6 +148,8 @@
                 "date-word": "Dec, 2023",
                 "date": "2023-12-06",
                 "lang": "pl",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/quiz",
                 "source": "https://github.com/PanWor/quiz"
             },
@@ -138,6 +160,8 @@
                 "date-word": "May, 2024",
                 "date": "2024-05-27",
                 "lang": "pl",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/blackjack",
                 "source": "https://github.com/PanWor/blackjack"
             },
@@ -148,6 +172,8 @@
                 "date-word": "Feb, 2024",
                 "date": "2023-02-21",
                 "lang": "en",
+                "pc": true,
+                "mobile": true,
                 "demo": "https://panwor.github.io/tic-tac-toe",
                 "source": "https://github.com/PanWor/tic-tac-toe"
             },
@@ -158,6 +184,8 @@
                 "date-word": "Feb, 2023",
                 "date": "2023-02-22",
                 "lang": "en",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/golden-thought",
                 "source": "https://github.com/PanWor/golden-thought"
             },
@@ -168,6 +196,8 @@
                 "date-word": "Feb, 2023",
                 "date": "2023-02-22",
                 "lang": "en",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/car-game",
                 "source": "https://github.com/PanWor/car-game"
             },
@@ -196,6 +226,8 @@
                 "date-word": "Feb, 2023",
                 "date": "2023-02-28",
                 "lang": "en",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/strongpassword",
                 "source": "https://github.com/PanWor/strongpassword"
             },
@@ -206,6 +238,8 @@
                 "date-word": "Feb, 2023",
                 "date": "2023-02-26",
                 "lang": "en",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/todo",
                 "source": "https://github.com/PanWor/todo"
             },
@@ -216,6 +250,8 @@
                 "date-word": "Feb, 2023",
                 "date": "2023-02-23",
                 "lang": "pl",
+                "pc": true,
+                "mobile": false,
                 "demo": "https://panwor.github.io/weather",
                 "source": "https://github.com/PanWor/weather"
             }

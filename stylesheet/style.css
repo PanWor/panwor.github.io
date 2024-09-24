@@ -344,3 +344,15 @@ a:hover, a:active {
 #more-info {
     color: #999;
 }
+
+.compatibility {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    height: 2.0rem;
+}
+
+.mobile {
+    right: 3.5rem;
+    height: 2rem;
+}

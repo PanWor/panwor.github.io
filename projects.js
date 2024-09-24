@@ -36,6 +36,14 @@ function whereIsJSON() {
     }
 }
 
+function whereIsIcons() {
+    if (window.location.href.includes('/pl/projects')) {
+        return '../../images/';
+    } else {
+        return '../images/';
+    }
+}
+
 function languageEmoji(lang) {
     if (lang === 'pl') {
         return '🇵🇱';
@@ -48,11 +56,11 @@ function languageEmoji(lang) {
 
 function languageButtons(lang) {
     if (lang === 'pl') {
-        return {demo: 'Demo', source: 'Kod projektu', 'see-more': 'Zobacz więcej'};
+        return {demo: 'Demo', source: 'Kod projektu', 'see-more': 'Zobacz więcej', 'pc': 'Przystosowany do PC', 'mobile': 'Przystosowany do smartfonów'};
     } else if (lang === 'en') {
-        return {demo: 'Demo', source: 'Source', 'see-more': 'See more'};
+        return {demo: 'Demo', source: 'Source', 'see-more': 'See more', 'pc': 'PC-compatible', 'mobile': 'Mobile-compatible'};
     } else {
-        return {demo: 'Demo', source: 'Source', 'see-more': 'See more'};
+        return {demo: 'Demo', source: 'Source', 'see-more': 'See more', 'pc': 'PC-compatible', 'mobile': 'Mobile-compatible'};
     }
 }
 
@@ -68,6 +76,7 @@ fetch(whereIsJSON())
     .then(data => {
         let success = true; 
         buttons = languageButtons(whatLanguage());
+        imagesSource = whereIsIcons();
         data = data.articles[whatLanguage()];
         console.log(`Projects: `, data);
         const sortedProjects = sortProjects(data);
@@ -80,6 +89,8 @@ fetch(whereIsJSON())
           let demo = project['demo'] ? project['demo'] : null;
           let source = project['source'] ? project['source'] : null;
           let seeMore = project['see-more'] ? project['see-more'] : null;
+          let pcCompatibility = project['pc'] ? project['pc'] : null;
+          let mobileCompatibility = project['mobile'] ? project['mobile'] : null;
   
           projectsContainer.innerHTML += `
             <div class="project-card">
@@ -92,6 +103,8 @@ fetch(whereIsJSON())
                     ${source ? `<a class="button small flex" href="${source}" target="_blank" rel="noreferrer">${buttons.source} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:0.75rem;height:0.75rem;fill:currentColor"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg></a>` : ``}
                     ${seeMore ? `<a class="button small flex" href="${seeMore}" rel="noreferrer">${buttons['see-more']} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:0.75rem;height:0.75rem;fill:currentColor"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg></a>` : ``}
                 </div>
+                ${pcCompatibility ? `<img class="compatibility" src="${imagesSource}pc.svg" alt="PC-compatible">` : ``}
+                ${mobileCompatibility ? `<img class="compatibility mobile" src="${imagesSource}mobile.svg" alt="Mobile-compatible">` : ``}
             </div>
                       `
   
