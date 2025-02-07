@@ -157,7 +157,6 @@ a.button, button, .dropdown {
 }
 
 .dropdown {
-    margin: -10px 0px 30px;
     position: relative;
 }
 
@@ -191,9 +190,10 @@ a.button:active, button:active {
     font-weight: 500;
     line-height: 1.5;
     list-style: none;
-    margin-left: calc(-64px);
     padding: 0;
     position: absolute;
+    top: 25px;
+    right: 0;
     width: max-content;
     z-index: 2;
 }
