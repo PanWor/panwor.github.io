@@ -4,7 +4,7 @@
             {   
                 "id": "pong",
                 "title": "Pong",
-                "description": "Prosta gra 2D w tenisa stołowego",
+                "description": "Prosta gra 2D inspirowana tenisem stołowym",
                 "date-word": "Maj, 2023",
                 "date": "2023-05-29",
                 "lang": "pl",
@@ -28,7 +28,7 @@
             {
                 "id": "blackjack",
                 "title": "Jack's Blackjack",
-                "description": "Prosta gra w blackjacka. (Brak funkcji \"Double\")",
+                "description": "Prosta gra w blackjacka bez funkcji podwajania stawki (\"Double\")",
                 "date-word": "Maj, 2024",
                 "date": "2024-05-27",
                 "lang": "pl",
@@ -40,7 +40,7 @@
             {
                 "id": "tictactoe",
                 "title": "Kółko i Krzyżyk",
-                "description": "Prosta gra \"Kółko i Krzyżyk\" z algorytmem Minimax (tj. taka, w której nie możesz wygrać)",
+                "description": "Klasyczna gra w \"Kółko i Krzyżyk\" z wykorzystaniem algorytmu Minimax (tj. nie możesz wygrać)",
                 "date-word": "Luty, 2024",
                 "date": "2023-02-21",
                 "lang": "en",
@@ -52,7 +52,7 @@
             {
                 "id": "golden-thought",
                 "title": "Generator złotych myśli",
-                "description": "Strona do generowania losowych złotych myśli używając API",
+                "description": "Generator inspiracji wykorzystujący zewnętrzne API do tworzenia losowych cytatów",
                 "date-word": "Luty, 2023",
                 "date": "2023-02-22",
                 "lang": "en",
@@ -64,7 +64,7 @@
             {
                 "id": "pixel-cars",
                 "title": "Remake \"Pixel Cars\"",
-                "description": "Remake gry stworzonej przez mojego znajomego (oryginalnie napisanej w Scratchu)",
+                "description": "Remake gry stworzonej przez mojego znajomego (oryginalnie napisanej w środowisku Scratch)",
                 "date-word": "Luty, 2023",
                 "date": "2023-02-22",
                 "lang": "en",
@@ -76,7 +76,7 @@
             {
                 "id": "python",
                 "title": "Stare projekty w Pythonie",
-                "description": "Bardzo prosty konwerter temperatury i kalkulator powierzchni figur płaskich",
+                "description": "Proste narzędzia: konwerter temperatur i kalkulator pól powierzchni figur płaskich",
                 "date-word": "Grudzień, 2021",
                 "date": "2021-12-05",
                 "lang": "pl",
@@ -85,7 +85,7 @@
             {
                 "id": "school",
                 "title": "Szkolne projekty",
-                "description": "Projekty ze szkoły od pana Kuriaty i pana Soppy",
+                "description": "Zbiór projektów ze szkoły od pana Kuriaty i pana Soppy",
                 "date-word": "–, –",
                 "date": "2024-09-21",
                 "lang": "none",
@@ -94,7 +94,7 @@
             {
                 "id": "strong-password",
                 "title": "Generator silnego hasła",
-                "description": "Generator silnych haseł z opcjami ustawiania preferencji. Możesz również sprawdzić, jak silne jest Twoje hasło!",
+                "description": "Zaawansowany generator haseł z możliwością dostosowywania parametrów i weryfikatorem bezpieczeństwa",
                 "date-word": "Luty, 2023",
                 "date": "2023-02-28",
                 "lang": "en",
@@ -118,7 +118,7 @@
             {
                 "id": "weather-opole",
                 "title": "Pogoda (w Opolu)",
-                "description": "Po prostu pokazuje aktualną i do 3 dni naprzód pogodę w Opolu przy użyciu API",
+                "description": "Aktualna prognoza pogody dla Opola z wykorzystaniem zewnętrznego API (3-dni w przód)",
                 "date-word": "Luty, 2023",
                 "date": "2023-02-23",
                 "lang": "pl",
@@ -132,7 +132,7 @@
             {   
                 "id": "pong",
                 "title": "Pong",
-                "description": "A simple 2D game about table tennis",
+                "description": "Simple 2D table tennis-inspired arcade game",
                 "date-word": "May, 2023",
                 "date": "2023-05-29",
                 "lang": "pl",
@@ -144,7 +144,7 @@
             {
                 "id": "quiz-js",
                 "title": "Quiz about JavaScript",
-                "description": "A very well-crafted site with a quiz about JS",
+                "description": "Polished site with a quiz about JS",
                 "date-word": "Dec, 2023",
                 "date": "2023-12-06",
                 "lang": "pl",
@@ -156,7 +156,7 @@
             {
                 "id": "blackjack",
                 "title": "Jack's Blackjack",
-                "description": "Simple blackjack game. (No \"Double\" function yet)",
+                "description": "Classic blackjack implementation currently missing double-down functionality",
                 "date-word": "May, 2024",
                 "date": "2024-05-27",
                 "lang": "pl",
@@ -180,7 +180,7 @@
             {
                 "id": "golden-thought",
                 "title": "Golden thought generator",
-                "description": "A very simple site to generate random golden thoughts using API",
+                "description": "API-powered web application generating random motivational quotes",
                 "date-word": "Feb, 2023",
                 "date": "2023-02-22",
                 "lang": "en",
@@ -204,7 +204,7 @@
             {
                 "id": "python",
                 "title": "Old python projects",
-                "description": "Very simple temperature converter and plane figure area calculator",
+                "description": "Very simple temperature converter and geometric area calculator",
                 "date-word": "Dec, 2021",
                 "date": "2021-12-05",
                 "lang": "pl",
@@ -213,7 +213,7 @@
             {
                 "id": "school",
                 "title": "School projects",
-                "description": "Projects from the school from Mr Kuriata and Mr Soppa",
+                "description": "Collection of school projects from Mr. Kuriata and Mr. Soppa",
                 "date-word": "–, –",
                 "date": "2024-09-21",
                 "lang": "none",
@@ -222,7 +222,7 @@
             {
                 "id": "strong-password",
                 "title": "Strong Password",
-                "description": "Strong password generator with options to set preferences. Also you can check how strong your password is!",
+                "description": "Customizable password generator with integrated strength verification system",
                 "date-word": "Feb, 2023",
                 "date": "2023-02-28",
                 "lang": "en",
@@ -234,7 +234,7 @@
             {
                 "id": "Luty, 2023",
                 "title": "Todo app",
-                "description": "Todo app with saving notes even after browser refresh!",
+                "description": "Todo app with saving notes even after browser refresh",
                 "date-word": "Feb, 2023",
                 "date": "2023-02-26",
                 "lang": "en",
@@ -246,7 +246,7 @@
             {
                 "id": "weather-opole",
                 "title": "Weather (in Opole)",
-                "description": "It simply shows the current and up to 3 days ahead weather in Opole using the API",
+                "description": "Real-time weather forecasting application for Opole using third-party API integration",
                 "date-word": "Feb, 2023",
                 "date": "2023-02-23",
                 "lang": "pl",
