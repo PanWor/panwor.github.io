@@ -184,6 +184,7 @@ a.button:active, button:active {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     color: var(--font-color-base);
+    cursor: default;
     display: block;
     font-family: var(--font-family);
     font-size: .9rem;
@@ -196,6 +197,10 @@ a.button:active, button:active {
     right: 0;
     width: max-content;
     z-index: 2;
+}
+
+.dropdown-menu > li {
+    cursor: pointer;
 }
 
 .dropdown-item:hover {
