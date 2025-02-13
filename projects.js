@@ -54,6 +54,28 @@ function languageEmoji(lang) {
     }
 }
 
+function languageEmojiTitle(projectLang, langUsed) {
+    if (langUsed=== 'pl') {
+        if (projectLang === 'pl') {
+            return 'Ten projekt jest w języku polskim';
+        } else if (projectLang === 'en') {
+            return 'Ten projekt jest w jęzku angielskim';
+        } else {
+            return 'Ten projekt nie ma określonego języka';
+        }
+    } else if (langUsed === 'en') {
+        if (projectLang === 'pl') {
+            return 'This project is in Polish';
+        } else if (projectLang === 'en') {
+            return 'This project is in English';
+        } else {
+            return 'This project has no defined language';
+        }
+    } else {
+        return 'Error / Błąd';
+    }
+}
+
 function languageButtons(lang) {
     if (lang === 'pl') {
         return {demo: 'Demo', source: 'Kod projektu', 'see-more': 'Zobacz więcej', 'pc': 'Przystosowany do PC', 'mobile': 'Przystosowany do smartfonów'};
@@ -86,6 +108,7 @@ fetch(whereIsJSON())
           let description = project.description;
           let dateWord = project['date-word'];
           let lang = languageEmoji(project.lang);
+          let langTitle = languageEmojiTitle(project.lang, whatLanguage());
           let demo = project['demo'] ? project['demo'] : null;
           let source = project['source'] ? project['source'] : null;
           let seeMore = project['see-more'] ? project['see-more'] : null;
@@ -94,7 +117,7 @@ fetch(whereIsJSON())
   
           projectsContainer.innerHTML += `
             <div class="project-card">
-                <div class="lang">${lang}</div>
+                <div class="lang" title="${langTitle}">${lang}</div>
                 <time>${dateWord}</time>
                 <a class="project-title">${title}</a>
                 <h4>${description}</h4>
