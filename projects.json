@@ -14,8 +14,8 @@
                 "source": "https://github.com/PanWor/pong"
             },
             {   
-                "id": "panwor.github.io",
-                "title": "panwor.github.io",
+                "id": "panwor.vercel.app",
+                "title": "Ta strona",
                 "description": "Strona, którą właśnie przeglądasz!",
                 "date-word": "Kwiecień, 2023",
                 "date": "2023-04-16",
@@ -153,8 +153,8 @@
                 "source": "https://github.com/PanWor/pong"
             },
             {   
-                "id": "panwor.github.io",
-                "title": "panwor.github.io",
+                "id": "panwor.vercel.app",
+                "title": "This website",
                 "description": "The website you are currently browsing!",
                 "date-word": "Apr, 2023",
                 "date": "2023-04-16",
