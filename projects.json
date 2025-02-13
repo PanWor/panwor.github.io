@@ -13,6 +13,17 @@
                 "demo": "https://panwor.github.io/pong",
                 "source": "https://github.com/PanWor/pong"
             },
+            {   
+                "id": "panwor.github.io",
+                "title": "panwor.github.io",
+                "description": "Strona, którą właśnie przeglądasz!",
+                "date-word": "Kwiecień, 2023",
+                "date": "2023-04-16",
+                "lang": "pl en",
+                "pc": true,
+                "mobile": true,
+                "source": "https://github.com/PanWor/panwor.github.io"
+            },
             {
                 "id": "quiz-js",
                 "title": "Quiz o JavaScript'cie",
@@ -140,6 +151,17 @@
                 "mobile": false,
                 "demo": "https://panwor.github.io/pong",
                 "source": "https://github.com/PanWor/pong"
+            },
+            {   
+                "id": "panwor.github.io",
+                "title": "panwor.github.io",
+                "description": "The website you are currently browsing!",
+                "date-word": "Apr, 2023",
+                "date": "2023-04-16",
+                "lang": "pl en",
+                "pc": true,
+                "mobile": true,
+                "source": "https://github.com/PanWor/panwor.github.io"
             },
             {
                 "id": "quiz-js",
