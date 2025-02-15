@@ -1,3 +1,5 @@
+document.querySelector('#projects').innerHTML = whatLanguage() === 'pl' ? '<p style="color:var(--muted-color);font-size:.9rem;">Ładowanie projektów...</p>' : '<p style="color:var(--muted-color);font-size:.9rem;">Loading projects...</p>';
+
 function sortProjects(data) {
     console.log(`SortProjects function called`);
     if (window.location.href.includes('?order=')) {
@@ -108,6 +110,8 @@ fetch(whereIsJSON())
         data = data.articles[whatLanguage()];
         console.log(`Projects: `, data);
         const sortedProjects = sortProjects(data);
+
+        document.querySelector('#projects').textContent = '';
                 
         sortedProjects.forEach(project => {
           let title = project.title;
