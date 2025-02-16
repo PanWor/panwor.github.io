@@ -29,8 +29,8 @@ function languageEmoji(lang) {
         return '🇵🇱';
     } else if (lang === 'en') {
         return '🇺🇸';
-    } else if (lang === 'pl en') {
-        return '🇵🇱 🇺🇸';
+    } else if (lang === 'en pl') {
+        return '🇺🇸 🇵🇱';
     } else {
         return '–';
     }
@@ -42,7 +42,7 @@ function languageEmojiTitle(projectLang, langUsed) {
             return 'Ten projekt jest w języku polskim';
         } else if (projectLang === 'en') {
             return 'Ten projekt jest w języku angielskim';
-        } else if (projectLang === 'pl en') {
+        } else if (projectLang === 'en pl') {
             return 'Ten projekt jest w języku polskim i angielskim';
         } else {
             return 'Ten projekt nie ma określonego języka';
@@ -52,7 +52,7 @@ function languageEmojiTitle(projectLang, langUsed) {
             return 'This project is in Polish';
         } else if (projectLang === 'en') {
             return 'This project is in English';
-        } else if (projectLang === 'pl en') {
+        } else if (projectLang === 'en pl') {
             return 'This project is in Polish and English';
         } else {
             return 'This project has no defined language';
