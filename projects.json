@@ -10,6 +10,7 @@
                 "lang": "pl",
                 "pc": true,
                 "mobile": false,
+                "featured": true,
                 "demo": "https://panwor.github.io/pong",
                 "source": "https://github.com/PanWor/pong"
             },
@@ -22,6 +23,7 @@
                 "lang": "pl en",
                 "pc": true,
                 "mobile": true,
+                "featured": true,
                 "source": "https://github.com/PanWor/panwor.github.io"
             },
             {
@@ -149,6 +151,7 @@
                 "lang": "pl",
                 "pc": true,
                 "mobile": false,
+                "featured": true,
                 "demo": "https://panwor.github.io/pong",
                 "source": "https://github.com/PanWor/pong"
             },
@@ -161,6 +164,7 @@
                 "lang": "pl en",
                 "pc": true,
                 "mobile": true,
+                "featured": true,
                 "source": "https://github.com/PanWor/panwor.github.io"
             },
             {

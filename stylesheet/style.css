@@ -68,7 +68,7 @@ header h4 {
     gap: 1rem;
 }
 
-main#projects {
+main#projects, main > #featured-projects {
     display: flex;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -76,7 +76,7 @@ main#projects {
 }
 
 @media screen and (max-width: 600px) {
-    main#projects {
+    main#projects, main > #featured-projects {
         grid-template-columns: repeat(1, 1fr);
     }
 }
