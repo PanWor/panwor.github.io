@@ -5,6 +5,12 @@
     color-scheme: dark;
 }
 
+@font-face {
+    font-family: NotoColorEmojiLimited;
+    unicode-range: U+1F1E6-1F1FF;
+    src: url('https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf');
+}
+
 :root {
     --bg-color: #181818;
     --card-color: #1f1f1f;
@@ -14,7 +20,7 @@
     --button-background-color: #252525;
     --font-color-base: #ddd;
     --margin-16: 16px;
-    --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, "NotoColorEmojiLimited";
 }
 
 body {
